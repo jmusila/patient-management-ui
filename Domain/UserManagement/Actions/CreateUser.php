@@ -11,7 +11,6 @@ class CreateUser extends BaseAction
     public function execute()
     {
         $data = UserData::fromArray($this->data);
-        $token = $this->token();
 
         $user = Http::withHeaders([
             'Authorization' => 'Bearer ' . $token,

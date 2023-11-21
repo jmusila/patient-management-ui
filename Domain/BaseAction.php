@@ -27,7 +27,7 @@ class BaseAction
             'password' => $request->input('password'),
         ];
 
-        $login = Http::post(config('app.base_url'), $data);
+        $login = Http::post(env('BASE_URL') . '/oauth/token', $data);
 
         return json_decode($login)->access_token;
     }

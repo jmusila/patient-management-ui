@@ -9,12 +9,12 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('sendLogins') }}">
                         @csrf
 
                         <div class="form-group">
                             <label for="email">{{ __('E-Mail Address') }}</label>
-                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input id="username" type="email" class="form-control" name="username" value="{{ old('email') }}" required autocomplete="email" autofocus>
                         </div>
 
                         <div class="form-group">
